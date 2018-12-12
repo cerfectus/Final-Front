@@ -7,8 +7,8 @@ class Form extends Component{
         super();
         this.state = {
             form: {
-                title: "",
-                author: "",
+                Equipo: "",
+                Inicial: "",
                 body: ""
             }
         }
@@ -50,26 +50,26 @@ class Form extends Component{
     };
 
     render(){
-        let {title, author, body} = this.state.form;
+        let {Equipo, Inicial, body} = this.state.form;
         return(
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label htmlFor="">
-                        Titulo:
+                        Equipo:
                         <input
-                            value={title}
+                            value={Equipo}
                             type="text"
-                            name="title"
+                            name="Equipo"
                             onChange={this.handleChange}/>
                     </label>
                 </div>
                 <div>
                     <label htmlFor="">
-                        Autor:
+                        Iniciales:
                         <input
-                            value={author}
+                            value={Inicial}
                             type="text"
-                            name="author"
+                            name="Inicial"
                             onChange={this.handleChange}/>
                     </label>
                 </div>
@@ -80,13 +80,13 @@ class Form extends Component{
                             value={body}
                             name="body"
                             id=""
-                            cols="30"
+                            cols="20"
                             rows="10"
-                            placeholder="que tienes que decir">
+                            placeholder="Lema de tu equipo">
                         </textarea>
                     </label>
                 </div>
-                <button type="submit">Picale papá</button>
+                <button type="submit">Crear</button>
             </form>
         )
     }

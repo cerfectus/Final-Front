@@ -36,7 +36,7 @@ class Home extends Component{
     render(){
         const {posts} = this.state;
         return (
-            <div>
+            <div className="box">
                 <h4>Lista de posts</h4>
                 {posts.length > 0 ?
                     <ul>
